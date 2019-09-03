@@ -9,6 +9,9 @@ sugar = 1.5
 butter = 1
 flour = 2.75
 cookie_num = int(input('How many cookies do you want to make?'))
+sugar = (input('How much sugar do you have'))
+butter = float(input('How much butter do you have'))
+flour = float(input('How much flour do you have'))
 
 print("You wil need: " + format(sugar * cookie_num, ', .2f ') + "cups of sugar")
 print("you will need:" + format(butter * cookie_num, ', .2f') + "cups of butter")
