@@ -10,11 +10,12 @@
 print("=" * 10, "Section 7.2 lists", "=" * 10)
 # 1) Create a list of days of the week, assign it to the variable days, remove """ """ to test
 
-"""
-days =
-"""
+
+days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # 2) Create a list with 5 items, set them all to 0, use the Repetition Operator ( * )
+food = ["apple," "banana", "pear", "watermelon", "grapes"]
+food * 0
 
 # 3) Print the contents of your days list using the for operator
 
