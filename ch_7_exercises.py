@@ -13,13 +13,15 @@ print("=" * 10, "Section 7.2 lists", "=" * 10)
 
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
+
 # 2) Create a list with 5 items, set them all to 0, use the Repetition Operator ( * )
 food = ["apple," "banana", "pear", "watermelon", "grapes"]
 food * 0
-
 # 3) Print the contents of your days list using the for operator
-
+for n in food:
+    print(n)
 # 4) Print the list item that holds the value Saturday from the days list by using it's index
+print(days(5))
 
 # 5) Create a variable called size to hold the length of the list days using the len function
 
