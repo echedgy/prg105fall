@@ -17,4 +17,4 @@ for month in ("January", "February", "March", "April", "May", "June", "July", "A
     print('The total amount of rainfall was:', total)
     print('The average monthly rainfall was:', total / 12)
 
-print("For " + str(num_year) + " years there was a total of " + format(grand_total, ', .2f') + " inches of rain. There was an average of " + format(grand_total / (num_year * 12)) + " inches of rain per month.")
+
