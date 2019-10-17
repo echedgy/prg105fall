@@ -1,9 +1,13 @@
 def main():
-    my_string = input("Enter in your First, Middle and last name: ")
-    word_list = my_string.split()
+    name = input("Enter in your First, Middle and last name: ")
 
-    for ch in word_list:
-print(ch[0] + ".")
+    initials = ""
+    name_list = name.split()
+    print(name_list)
+    for part in name_list:
+        initials = initials + part[0:1].upper() + ", "
+
+    print(initials)
+
 
 main()
-
