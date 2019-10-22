@@ -11,18 +11,22 @@ import random
 print("=" * 10, "Section 10.2 Coin class to Dice class", "=" * 10)
 
 
-class Coin:  # note class names are capitalized
+class Dice:  # note class names are capitalized
     def __init__(self):
         # TODO change side_up to '1'
-        self.side_up = 'Heads'
+        self.side_up = '1'
 
         # TODO change toss() to roll()
-    def toss(self):
+    def roll(self):
         # TODO get a random value and set side_up for the 6 sides of the dice
-        if random.randint(0, 1) == 0:
-            self.side_up = 'Heads'
+        if random.randint(0, 6) == 0:
+            self.side_up = '1'
+        elif self.side_up = '2'
+        elif self.side_up = '3'
+        elif self.side_up = '4'
+        elif self.side_up = '5'
         else:
-            self.side_up = 'Tails'
+            self.side_up = '6'
             
     def get_side_up(self):
         return self.side_up
@@ -30,16 +34,16 @@ class Coin:  # note class names are capitalized
 
 def main():
     # TODO change my_coin to my_dice, my_dice_two and the appropriate class name throughout main
-    my_coin = Coin()
-    my_coin_two = Coin()
-    print('This side is up, ', my_coin.get_side_up())
-    print('This side is up, ', my_coin_two.get_side_up())
+    my_dice = Dice()
+    my_dice_two = Dice()
+    print('This side is up, ', my_dice.get_side_up())
+    print('This side is up, ', my_dice_two.get_side_up())
     
     print('I am tossing the coins...')
-    my_coin.toss()
-    my_coin_two.toss()
-    print('This side is up, ', my_coin.get_side_up())
-    print('This side is up, ', my_coin_two.get_side_up())
+    my_dice.toss()
+    my_dice_two.toss()
+    print('This side is up, ', my_dice.get_side_up())
+    print('This side is up, ', my_dice_two.get_side_up())
 
 
 main()
