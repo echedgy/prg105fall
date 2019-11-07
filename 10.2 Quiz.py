@@ -31,7 +31,7 @@ def main():
 
 def ask(all_the_questions):
     correct = 0
-    for item in range(2):
+    for item in range(5):
         player_questions = random.choice(all_the_questions)
         print(player_questions.get_question())
         print("A. " + player_questions.get_answer1())

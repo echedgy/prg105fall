@@ -6,7 +6,7 @@ class Question:
         self.__answer2 = a2
         self.__answer3 = a3
         self.__answer4 = a4
-        self.__correct_answer = correct
+        self.__correct = correct
 
     def set_question(self, q):
         self.__question = q
@@ -23,8 +23,8 @@ class Question:
     def set_answer4(self, a4):
         self.__answer4 = a4
 
-    def set_correct_answer(self, answer):
-        self.__correct_answer = answer
+    def set_correct_answer(self, correct):
+        self.__correct = correct
 
     def get_question(self):
         return self.__question
@@ -42,7 +42,7 @@ class Question:
         return self.__answer4
 
     def get_correct_answer(self):
-        return self.__correct_answer
+        return self.__correct
 
     def __str__(self):
-        return "\n" + self.__question + "\n" + self.__answer1 + "\n" + self.__answer2 + "\n" + self.__answer3 + "\n" + self.__answer4 + "\n" + self.__correct_answer
+        return "\n" + self.__question + "\n" + self.__answer1 + "\n" + self.__answer2 + "\n" + self.__answer3 + "\n" + self.__answer4 + "\n" + self.__correct
