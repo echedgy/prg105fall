@@ -2,15 +2,17 @@
 # the user to enter data for each of the object’s data attributes.
 # Store the data in the object and then use the object’s accessor methods to retrieve it and display it on the screen.
 import employee
+
+
 def main():
 
-    print('Enter the following details of the employee')
-    employee_name = input('Enter Employee Name: ')
-    employee_number = input('Enter Employee Number')
-    shift = input('Enter Shift Number')
-    pay_rate = input('Enter Pay Rate')
+    name = input("Employee's name: ")
+    number = input("Employees's number: ")
+    shift = input("Employees's Shift: ")
+    pay = input("Employee's pay rate: ")
 
-print('Details of Employee')
-print("Name: ", employee_name_)
-if __name == __main__:
+    new_employee = employee.ProductionWorker(name, number, shift, pay)
+    print("\nEmployee name: " + new_employee.get_employee_name() + "\nEmployee Number: " + new_employee.get_employee_number() + "\nShift: " + new_employee.get_shift() + "\nPay Rate: " + new_employee.get_pay_rate())
+
+
 main()

@@ -33,9 +33,9 @@ class Employee:
 
 
 class ProductionWorker(Employee):
-
-
     def __init__(self, employee_name, employee_number, shift, pay_rate):
+        Employee.__init__(self, employee_name, employee_number)
+
         self.__shift = shift
         self.__pay_rate = pay_rate
 
@@ -52,6 +52,5 @@ class ProductionWorker(Employee):
         return self.__pay_rate
 
     def __str__(self):
-        return "\nShift: " + self.__shift + "\nPay Rate: " + self.__pay_rate
-
-
+        return "\nEmployee Name: " + self.get_employee_name() + "\nEmployee Number: " + self.get_employee_number() +\
+                "\nShift: " + self.__shift + "\nPay Rate: " + self.__pay_rate
