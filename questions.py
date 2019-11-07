@@ -1,6 +1,6 @@
 class Question:
 
-    def _init_(self, q, a1, a2, a3, a4, correct):
+    def __init__(self, q, a1, a2, a3, a4, correct):
         self.__question = q
         self.__answer1 = a1
         self.__answer2 = a2
@@ -45,5 +45,4 @@ class Question:
         return self.__correct_answer
 
     def __str__(self):
-        return "\n" + self.__question + "\n" + self.__answer1 + "\n" + self.__answer2 + "\n" + self.__answer3 +\
-               "\n" + self.__answer4 + "\n" + self.__correct_answer
+        return "\n" + self.__question + "\n" + self.__answer1 + "\n" + self.__answer2 + "\n" + self.__answer3 + "\n" + self.__answer4 + "\n" + self.__correct_answer
