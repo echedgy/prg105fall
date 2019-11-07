@@ -6,11 +6,12 @@
 
 
 class OfficeFurniture:
-    def __init__(self, category, material, length, width, price):
+    def __init__(self, category, material, length, width, height, price):
         self.__category = category
         self.__material = material
         self.__length = length
         self.__width = width
+        self.__height = height
         self.__price = price
 
     def set_category(self, category):
@@ -24,6 +25,9 @@ class OfficeFurniture:
 
     def set_width(self, width):
         self.__width = width
+
+    def set_height(self, height):
+        self.__height = height
 
     def set_price(self, price):
         self.__price = price
@@ -40,8 +44,15 @@ class OfficeFurniture:
     def get_width(self):
         return self.__width
 
+    def get_height(self):
+        return self.__height
+
     def get_price(self):
         return self.__price
 
     def __str__(self):
-        return "\nCategory: " + self.__category + "\nMaterial: " + self.__material + "\nLength: " + self.__length + "\nWidth: " + self.__width + "\nPrice: " + self.__price
+        return "\nCategory: " + self.__category + "\nMaterial: " + self.__material +\
+               "\nLength: " + self.__length + "\nWidth: " + self.__width + "\nHeight: " +\
+               self.__height + "\nPrice: " + self.__price
+
+
