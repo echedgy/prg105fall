@@ -1,3 +1,10 @@
+# In the first step, you will create a parent class. Create a parent class for Office Furniture.
+# Set the class variables to be a category
+# (desk, chair, filing cabinet would be examples), material, length, width, height, and price.
+# Include a method that returns a string about the object.
+# Implement the __str__ method (refer to section 10.2 in your book for details).
+
+
 class OfficeFurniture:
     def __init__(self, category, material, length, width, price):
         self.__category = category
