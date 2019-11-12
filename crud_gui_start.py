@@ -170,6 +170,9 @@ class AddGUI:
         else:
             result = self.customers.get(name, name + " " + email + ' Will be added')
             self.customers[name] = email
+            output_file = open("customer_file.dat", 'wb')
+            pickle.dump(self.customers, output_file)
+            output_file.close()
         self.value.set(result)
 
     def back(self):
