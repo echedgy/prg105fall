@@ -20,12 +20,12 @@ def main():
             average = total / count
             print("line count is: " + str(count))
             print("total value of records is: " + format(total, ','))
-            print("Average of records is: " + format(total, ",.2f"))
+            print("Average of records is: " + format(average, ",.2f"))
 
     except ValueError:
         print("error: Something is wrong")
 
-        input_file.close()
+    input_file.close()
 
 
 main()
