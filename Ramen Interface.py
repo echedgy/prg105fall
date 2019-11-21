@@ -17,11 +17,40 @@ class Ramen:
     def __init__(self):
         self.main_window = tkinter.Tk()
         self.drink_frame = tkinter.Frame(self.main_window)
+        self.app_frame = tkinter.Frame(self.main_window)
         self.ramen_frame = tkinter.Frame(self.main_window)
         self.size_frame = tkinter.Frame(self.main_window)
         self.add_ons_frame = tkinter.Frame(self.main_window)
         self.order_frame = tkinter.Frame(self.main_window)
         self.charges_frame = tkinter.Frame(self.main_window)
+
+        # apps amd checkbox variables
+        self.gyoza_var = tkinter.IntVar()
+        self.house_salad_var = tkinter.IntVar()
+        self.egg_rolls_var = tkinter.IntVar()
+        self.edamame_var = tkinter.IntVar()
+        self.yakitori_var = tkinter.IntVar()
+
+        self.gyoza_var.set(0)
+        self.house_salad_var.set(0)
+        self.egg_rolls_var.set(0)
+        self.edamame_var.set(0)
+        self.yakitori_var.set(0)
+
+        self.app_label = tkinter.Label(self.app_frame, text="Appetizers")
+        self.gyoza = tkinter.Checkbutton(self.app_frame, text='Gyoza', variable=self.gyoza_var)
+        self.house_salad = tkinter.Checkbutton(self.app_frame, text='House Salad', variable=self.house_salad_var)
+        self.egg_rolls = tkinter.Checkbutton(self.app_frame, text='Egg Rolls', variable=self.egg_rolls_var)
+        self.edamame = tkinter.Checkbutton(self.app_frame, text='Edamame', variable=self.edamame_var)
+        self.yakitori = tkinter.Checkbutton(self.app_frame, text='Yakitori', variable=self.yakitori_var)
+
+        self.app_label.pack()
+        self.gyoza.pack(side="left")
+        self.house_salad.pack(side="left")
+        self.egg_rolls.pack(side="left")
+        self.edamame.pack(side="left")
+        self.yakitori.pack(side="left")
+
 
         # drinks and checkbox variables
         self.water_var = tkinter.IntVar()
@@ -42,7 +71,7 @@ class Ramen:
         self.hot_sake_var.set(0)
         self.sake_var.set(0)
 
-        self.add_label = tkinter.Label(self.drink_frame, text="Drinks")
+        self.drink_label = tkinter.Label(self.drink_frame, text="Drinks")
         self.water = tkinter.Checkbutton(self.drink_frame, text='Water', variable=self.water_var)
         self.green_tea = tkinter.Checkbutton(self.drink_frame, text='Green Tea', variable=self.green_tea_var)
         self.hot_tea = tkinter.Checkbutton(self.drink_frame, text='Hot Tea', variable=self.hot_tea_var)
@@ -52,7 +81,7 @@ class Ramen:
         self.hot_sake = tkinter.Checkbutton(self.drink_frame, text="Hot Sake", variable=self.hot_sake_var)
         self.sake = tkinter.Checkbutton(self.drink_frame, text="Sake", variable=self.sake_var)
 
-        self.add_label.pack()
+        self.drink_label.pack()
         self.water.pack(side="left")
         self.green_tea.pack(side="left")
         self.hot_tea.pack(side="left")
@@ -141,6 +170,7 @@ class Ramen:
 
         # pack frames
         self.drink_frame.pack()
+        self.app_frame.pack()
         self.ramen_frame.pack()
         self.size_frame.pack()
         self.add_ons_frame.pack()
@@ -168,12 +198,23 @@ class Ramen:
         if self.sake_var.get() == 1:
             output += "Sake "
 
+        if self.gyoza_var.get() == 1:
+            output += ", a side of Gyoza, "
+        if self.house_salad_var.get() == 1:
+            output += ", a side of House Salad, "
+        if self.egg_rolls_var.get() == 1:
+            output += ", a side of Egg Rolls, "
+        if self.edamame_var.get() == 1:
+            output += ", a side of Edamame, "
+        if self.yakitori_var.get() == 1:
+            output += ", a side of Yakitori, "
+
         if self.size_var.get() == 1:
-            output += " a small "
+            output += "a small "
         elif self.size_var.get() == 2:
-            output += " a Medium "
+            output += "a Medium "
         elif self.size_var.get() == 3:
-            output += " a Large "
+            output += "a Large "
 
         if self.ramen_var.get() == 1:
             output += "Shio Broth"
@@ -202,7 +243,7 @@ class Ramen:
         if self.negi_var.get() == 1:
             output += "\nwith Negi (Green Onions) "
         if self.moyashi_var.get() == 1:
-            output += "\nwith Moyashi (BVean Sprouts) "
+            output += "\nwith Moyashi (Bean Sprouts) "
         if self.naruto_var.get() == 1:
             output += "\nwith Naruto (Fish Cake) "
         self.order_info.set(output)
