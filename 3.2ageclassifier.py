@@ -1,9 +1,10 @@
-user_age = int(input("How old are you?"))
-if user_age <= 1:
-    print(" you are an infant")
-    if user_age < 13:
-        print(" you are a child")
-        if user_age < 20:
-            print("You must be a teen")
-        else:
-            print("You are an adult")
+user_Age = int(input(" Please enter your age: " ))
+
+if user_Age <= 1:
+    print(" Then you are an infant ")
+elif user_Age < 13:
+    print(" Then you are a child ")
+elif user_Age < 20:
+    print("Then you are a teenager")
+elif user_Age >= 20:
+    print(" Then this would make you an adult" )
