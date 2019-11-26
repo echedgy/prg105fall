@@ -16,14 +16,15 @@ import tkinter
 class Ramen:
     def __init__(self):
         self.main_window = tkinter.Tk()
-        self.drink_frame = tkinter.Frame(self.main_window)
-        self.app_frame = tkinter.Frame(self.main_window)
-        self.ramen_frame = tkinter.Frame(self.main_window)
-        self.size_frame = tkinter.Frame(self.main_window)
-        self.add_ons_frame = tkinter.Frame(self.main_window)
-        self.order_frame = tkinter.Frame(self.main_window)
-        self.charges_frame = tkinter.Frame(self.main_window)
-
+        self.drink_frame = tkinter.Frame(self.main_window, bg="yellow")
+        self.app_frame = tkinter.Frame(self.main_window, bg="yellow")
+        self.ramen_frame = tkinter.Frame(self.main_window, bg="yellow")
+        self.size_frame = tkinter.Frame(self.main_window, bg="yellow")
+        self.add_ons_frame = tkinter.Frame(self.main_window, bg="yellow")
+        self.order_frame = tkinter.Frame(self.main_window, bg="yellow")
+        self.charges_frame = tkinter.Frame(self.main_window, bg="yellow")
+        self.main_window.title("Take Out Menu")
+        self.main_window.configure(background="yellow")
         # apps amd checkbox variables
         self.gyoza_var = tkinter.IntVar()
         self.house_salad_var = tkinter.IntVar()
@@ -37,12 +38,12 @@ class Ramen:
         self.edamame_var.set(0)
         self.yakitori_var.set(0)
 
-        self.app_label = tkinter.Label(self.app_frame, text="Appetizers")
-        self.gyoza = tkinter.Checkbutton(self.app_frame, text='Gyoza', variable=self.gyoza_var)
-        self.house_salad = tkinter.Checkbutton(self.app_frame, text='House Salad', variable=self.house_salad_var)
-        self.egg_rolls = tkinter.Checkbutton(self.app_frame, text='Egg Rolls', variable=self.egg_rolls_var)
-        self.edamame = tkinter.Checkbutton(self.app_frame, text='Edamame', variable=self.edamame_var)
-        self.yakitori = tkinter.Checkbutton(self.app_frame, text='Yakitori', variable=self.yakitori_var)
+        self.app_label = tkinter.Label(self.app_frame, text="Appetizers", bg="yellow", fg="blue", font="Calibri 16 bold")
+        self.gyoza = tkinter.Checkbutton(self.app_frame, text='Gyoza', bg="yellow", variable=self.gyoza_var)
+        self.house_salad = tkinter.Checkbutton(self.app_frame, text='House Salad', bg="yellow", variable=self.house_salad_var)
+        self.egg_rolls = tkinter.Checkbutton(self.app_frame, text='Egg Rolls', bg="yellow", variable=self.egg_rolls_var)
+        self.edamame = tkinter.Checkbutton(self.app_frame, text='Edamame', bg="yellow", variable=self.edamame_var)
+        self.yakitori = tkinter.Checkbutton(self.app_frame, text='Yakitori', bg="yellow", variable=self.yakitori_var)
 
         self.app_label.pack()
         self.gyoza.pack(side="left")
@@ -52,7 +53,7 @@ class Ramen:
         self.yakitori.pack(side="left")
 
 
-        # drinks and checkbox variables
+# drinks and checkbox variables
         self.water_var = tkinter.IntVar()
         self.green_tea_var = tkinter.IntVar()
         self.hot_tea_var = tkinter.IntVar()
@@ -71,15 +72,15 @@ class Ramen:
         self.hot_sake_var.set(0)
         self.sake_var.set(0)
 
-        self.drink_label = tkinter.Label(self.drink_frame, text="Drinks")
-        self.water = tkinter.Checkbutton(self.drink_frame, text='Water', variable=self.water_var)
-        self.green_tea = tkinter.Checkbutton(self.drink_frame, text='Green Tea', variable=self.green_tea_var)
-        self.hot_tea = tkinter.Checkbutton(self.drink_frame, text='Hot Tea', variable=self.hot_tea_var)
-        self.coke = tkinter.Checkbutton(self.drink_frame, text='Coca Cola', variable=self.coke_var)
-        self.sapporo = tkinter.Checkbutton(self.drink_frame, text='Sapporo', variable=self.sapporo_var)
-        self.miller = tkinter.Checkbutton(self.drink_frame, text='Miller Lite', variable=self.miller_var)
-        self.hot_sake = tkinter.Checkbutton(self.drink_frame, text="Hot Sake", variable=self.hot_sake_var)
-        self.sake = tkinter.Checkbutton(self.drink_frame, text="Sake", variable=self.sake_var)
+        self.drink_label = tkinter.Label(self.drink_frame, text="Drinks", bg="yellow", fg="blue", font="Calibri 16 bold")
+        self.water = tkinter.Checkbutton(self.drink_frame, text='Water', bg="yellow", variable=self.water_var)
+        self.green_tea = tkinter.Checkbutton(self.drink_frame, text='Green Tea', bg="yellow", variable=self.green_tea_var)
+        self.hot_tea = tkinter.Checkbutton(self.drink_frame, text='Hot Tea', bg="yellow", variable=self.hot_tea_var)
+        self.coke = tkinter.Checkbutton(self.drink_frame, text='Coca Cola', bg="yellow", variable=self.coke_var)
+        self.sapporo = tkinter.Checkbutton(self.drink_frame, text='Sapporo', bg="yellow", variable=self.sapporo_var)
+        self.miller = tkinter.Checkbutton(self.drink_frame, text='Miller Lite', bg="yellow", variable=self.miller_var)
+        self.hot_sake = tkinter.Checkbutton(self.drink_frame, text="Hot Sake", bg="yellow", variable=self.hot_sake_var)
+        self.sake = tkinter.Checkbutton(self.drink_frame, text="Sake", bg="yellow", variable=self.sake_var)
 
         self.drink_label.pack()
         self.water.pack(side="left")
@@ -99,12 +100,11 @@ class Ramen:
         self.ramen_var.set(1)
         self.size_var.set(1)
 
-        self.ramen_label = tkinter.Label(self.ramen_frame, text='Ramen')
-        self.broth1 = tkinter.Radiobutton(self.ramen_frame, text='Shio (Salt) Broth', variable=self.ramen_var, value=1)
-        self.broth2 = tkinter.Radiobutton(self.ramen_frame, text='Tonkotsu (Pork) Broth', variable=self.ramen_var, value=2)
-        self.broth3 = tkinter.Radiobutton(self.ramen_frame, text='Miso (Soybean) Broth', variable=self.ramen_var, value=3)
-        self.broth4 = tkinter.Radiobutton(self.ramen_frame, text='Shoyu (Soy Sauce) Broth', variable=self.ramen_var, value=3)
-
+        self.ramen_label = tkinter.Label(self.ramen_frame, text='Ramen', bg="yellow", fg="blue", font="Calibri 16 bold")
+        self.broth1 = tkinter.Radiobutton(self.ramen_frame, text='Shio (Salt) Broth', bg="yellow", variable=self.ramen_var, value=1)
+        self.broth2 = tkinter.Radiobutton(self.ramen_frame, text='Tonkotsu (Pork) Broth', bg="yellow", variable=self.ramen_var, value=2)
+        self.broth3 = tkinter.Radiobutton(self.ramen_frame, text='Miso (Soybean) Broth', bg="yellow", variable=self.ramen_var, value=3)
+        self.broth4 = tkinter.Radiobutton(self.ramen_frame, text='Shoyu (Soy Sauce) Broth', bg="yellow", variable=self.ramen_var, value=3)
 
         self.ramen_label.pack()
         self.broth1.pack(side="left")
@@ -112,10 +112,10 @@ class Ramen:
         self.broth3.pack(side="left")
         self.broth4.pack(side='left')
 
-        self.size_label = tkinter.Label(self.size_frame, text='Size')
-        self.size1 = tkinter.Radiobutton(self.size_frame, text='Small - $7.25', variable=self.size_var, value=1)
-        self.size2 = tkinter.Radiobutton(self.size_frame, text='Medium - $8.25', variable=self.size_var, value=2)
-        self.size3 = tkinter.Radiobutton(self.size_frame, text='Large - $10.00', variable=self.size_var, value=3)
+        self.size_label = tkinter.Label(self.size_frame, text='Size', bg="yellow", fg="blue", font="Calibri 16 bold")
+        self.size1 = tkinter.Radiobutton(self.size_frame, text='Small - $7.25', bg="yellow", variable=self.size_var, value=1)
+        self.size2 = tkinter.Radiobutton(self.size_frame, text='Medium - $8.25', bg="yellow", variable=self.size_var, value=2)
+        self.size3 = tkinter.Radiobutton(self.size_frame, text='Large - $10.00', bg="yellow", variable=self.size_var, value=3)
 
         self.size_label.pack()
         self.size1.pack(side="left")
@@ -139,14 +139,14 @@ class Ramen:
         self.moyashi_var.set(0)
         self.naruto_var.set(0)
 
-        self.add_label = tkinter.Label(self.add_ons_frame, text="Add Ons")
-        self.chashu = tkinter.Checkbutton(self.add_ons_frame, text='Chashu', variable=self.chashu_var)
-        self.mushrooms = tkinter.Checkbutton(self.add_ons_frame, text='Mushrooms', variable=self.mushrooms_var)
-        self.egg = tkinter.Checkbutton(self.add_ons_frame, text='Egg', variable=self.egg_var)
-        self.bamboo_shoots = tkinter.Checkbutton(self.add_ons_frame, text='Bamboo Shoots', variable=self.bamboo_var)
-        self.negi = tkinter.Checkbutton(self.add_ons_frame, text='Negi (Green Onions/Leeks)', variable=self.negi_var)
-        self.moyashi = tkinter.Checkbutton(self.add_ons_frame, text='Moyashi (Bean Sprouts)', variable=self.moyashi_var)
-        self.naruto = tkinter.Checkbutton(self.add_ons_frame, text="Naruto (Fish Cake)", variable=self.naruto_var)
+        self.add_label = tkinter.Label(self.add_ons_frame, text="Add Ons", bg="yellow", fg="blue", font="Calibri 16 bold")
+        self.chashu = tkinter.Checkbutton(self.add_ons_frame, text='Chashu', bg="yellow", variable=self.chashu_var)
+        self.mushrooms = tkinter.Checkbutton(self.add_ons_frame, text='Mushrooms', bg="yellow", variable=self.mushrooms_var)
+        self.egg = tkinter.Checkbutton(self.add_ons_frame, text='Egg', bg="yellow", variable=self.egg_var)
+        self.bamboo_shoots = tkinter.Checkbutton(self.add_ons_frame, text='Bamboo Shoots', bg="yellow", variable=self.bamboo_var)
+        self.negi = tkinter.Checkbutton(self.add_ons_frame, text='Negi (Green Onions/Leeks)', bg="yellow", variable=self.negi_var)
+        self.moyashi = tkinter.Checkbutton(self.add_ons_frame, text='Moyashi (Bean Sprouts)', bg="yellow", variable=self.moyashi_var)
+        self.naruto = tkinter.Checkbutton(self.add_ons_frame, text="Naruto (Fish Cake)", bg="yellow", variable=self.naruto_var)
 
         self.add_label.pack()
         self.chashu.pack(side="left")
@@ -158,8 +158,8 @@ class Ramen:
         self.naruto.pack(side='left')
         # order
 
-        self.order_button = tkinter.Button(self.order_frame, text='Order', command=self.display)
-        self.cancel_button = tkinter.Button(self.order_frame, text='Cancel', command=self.main_window.destroy)
+        self.order_button = tkinter.Button(self.order_frame, text='Order', bg="green", fg="blue", font="Calibri 16 bold", command=self.display)
+        self.cancel_button = tkinter.Button(self.order_frame, text='Cancel', bg="red", fg="blue", font="Calibri 16 bold", command=self.main_window.destroy)
 
         self.order_button.pack(side='left')
         self.cancel_button.pack(side='left')
@@ -180,7 +180,7 @@ class Ramen:
         tkinter.mainloop()
 
     def display(self):
-        output = "you ordered a "
+        output = "you ordered a ",
         if self.water_var.get() == 1:
             output += "water "
         if self.green_tea_var.get() == 1:
