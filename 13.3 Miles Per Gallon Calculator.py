@@ -11,9 +11,9 @@ class MPG:
     def __init__(self):
         self.main_window = tkinter.Tk()
 
-        self.top_frame = tkinter.Frame
-        self.middle_frame = tkinter.Frame
-        self.bottom_frame = tkinter.Frame
+        self.top_frame = tkinter.Frame()
+        self.middle_frame = tkinter.Frame()
+        self.bottom_frame = tkinter.Frame()
 
         # top frame
 
