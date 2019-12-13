@@ -71,7 +71,7 @@ class Ramen:
         self.cancel_button.pack(side='left')
         # charges
         self.order_info = tkinter.StringVar()
-        self.order_output = tkinter.Label(self.charges_frame, textvarable=self.order_info)
+        self.order_output = tkinter.Label(self.charges_frame, textvariable=self.order_info)
         self.order_output.pack()
 
         # pack frames
